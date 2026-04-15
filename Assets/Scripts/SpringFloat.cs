@@ -50,7 +50,7 @@ public class SpringVector2
         y.target = ty;
     }
 
-    void Update()
+    public void Update()
     {
         x.Update();
         y.Update();
@@ -80,8 +80,7 @@ public class SpringVector3
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
         x.Update();
         y.Update();
