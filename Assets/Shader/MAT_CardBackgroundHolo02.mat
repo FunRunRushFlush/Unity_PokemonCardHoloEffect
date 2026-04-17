@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1424316830521143300
+--- !u!114 &-7355873868713215886
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,42 +20,40 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_HoloCard-Shader
-  m_Shader: {fileID: -6465566751694194690, guid: 07baab92039ff7346b57f222dbb65528, type: 3}
+  m_Name: MAT_CardBackgroundHolo02
+  m_Shader: {fileID: -6465566751694194690, guid: ec95a3c8e670c5240a205d9d2092ae21, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _CardArt:
-        m_Texture: {fileID: 2800000, guid: 8fe3185e7ed3b4e45abb5b07a2b2c9d4, type: 3}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: b58f6e56010d1ec4093b976f4863d5a6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _FoilTex:
+    - _Heightmap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GlitterTex:
+    - _Holo_Color_Ramp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 2800000, guid: 3a4ac03b5db638d49bededd0cb82e26e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_db8eb5a4edaf4d13a656c02bb60a4252_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 3095222168d5a124081b82c8dd1763be, type: 3}
-        m_Scale: {x: 1, y: 1}
+    - _Holo_Mask:
+        m_Texture: {fileID: 2800000, guid: ca3fb850b8a8b554a8233ba81784a699, type: 3}
+        m_Scale: {x: 2.2, y: 3}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
@@ -71,16 +69,35 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BackgroundX: 0
-    - _BackgroundY: 0
-    - _CardOpacity: 1
-    - _PointerFromCenter: 0
-    - _PointerFromLeft: 0
-    - _PointerFromTop: 0
-    - _PointerX: 0.5
-    - _PointerY: 0.5
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _CastShadows: 1
+    - _Cull: 2
+    - _DstBlend: 0
+    - _DstBlendAlpha: 0
+    - _Heightmap_Strength: 0.478
+    - _Holo_Anim_Speed: 0
+    - _Holo_Density: 4
+    - _Holo_Noise_Scale: 0
+    - _Holo_Offset: 0.25
+    - _Holo_Rotation_Scroll_Speed: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.018
+    - _SrcBlend: 1
+    - _SrcBlendAlpha: 1
+    - _Surface: 0
+    - _USE_COLOR_RAMP: 0
+    - _WorkflowMode: 0
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Holo_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Holo_Direction: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
