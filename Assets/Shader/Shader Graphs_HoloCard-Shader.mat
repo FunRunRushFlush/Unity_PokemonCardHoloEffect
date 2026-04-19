@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_HoloCard-Shader
+  m_Shader: {fileID: -6465566751694194690, guid: 07baab92039ff7346b57f222dbb65528, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CardArt:
+        m_Texture: {fileID: 2800000, guid: 8fe3185e7ed3b4e45abb5b07a2b2c9d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosBottomTex:
+        m_Texture: {fileID: 2800000, guid: 0f132e287139db040bff67f6cbd2545f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosMiddleTex:
+        m_Texture: {fileID: 2800000, guid: f7af5b30272f71b4c8e052a57b0f9cff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosTopTex:
+        m_Texture: {fileID: 2800000, guid: f8e50116c9fb14e4ba8b525c9ec0f4ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoilTex:
+        m_Texture: {fileID: 2800000, guid: 4806fef06beae79498bbb05ffb9beea9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrainTex:
+        m_Texture: {fileID: 2800000, guid: 771bc8137a2ed984ea582e25175250ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 2800000, guid: 4806fef06beae79498bbb05ffb9beea9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PatternTex:
+        m_Texture: {fileID: 2800000, guid: af606f87974916e429b61cf3c4de8834, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BackgroundX: 0
+    - _BackgroundY: 0
+    - _CardOpacity: 1
+    - _EffectStrength: 1
+    - _FoilBrightness: 0.55
+    - _HoloMode: 0
+    - _LayoutMaskMode: 0
+    - _PointerFromCenter: 0
+    - _PointerFromLeft: 0
+    - _PointerFromTop: 0
+    - _PointerX: 0
+    - _PointerY: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SeedX: 0.37
+    - _SeedY: 0.73
+    - _UseMaskTex: 0
+    m_Colors:
+    - _CardGlowColor: {r: 0.85, g: 0.95, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &8782470757118302605
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10

@@ -8,7 +8,7 @@ The goal is to keep one main Unity shader pipeline that can render many Pokemon-
 
 Important current decision: the first full HLSL compositor was too hard for the team to reason about and tune. It is now treated as a prototype/reference. The active designer-facing shader is `HoloCard-BasicGloss.shadergraph`, rebuilt one holo layer at a time.
 
-Current checkpoint: the active graph is intentionally a Basic Gloss workbench. The full future property contract is documented below, but `HoloCard-BasicGloss.shadergraph` exposes only the four properties it actually uses today. Add the other properties back only when the visible graph layers need them.
+Current checkpoint: the active graph is intentionally a Basic Gloss workbench. The full future property contract is documented below, but `HoloCard-BasicGloss.shadergraph` exposes only the properties it actually uses today. Add the other properties back only when the visible graph layers need them.
 
 ## Current Architecture
 
@@ -39,11 +39,14 @@ The holo system is split into four layers:
      - `_PointerX`
      - `_PointerY`
      - `_CardOpacity`
+     - `_GlossInnerRadius`
+     - `_GlossOuterRadius`
+     - `_GlossIntensity`
    - Its active output is a visible node chain.
    - Current active output:
      - `_CardArt` sample -> `Overlay.baseColor`
      - `GlareLayer` -> `Overlay.blend`
-     - `_CardOpacity` -> `Overlay.opacity`
+     - `_CardOpacity * _GlossIntensity` -> `Overlay.opacity`
      - `Overlay.result` -> `SurfaceDescription.BaseColor`
      - `_CardArt.a` -> `SurfaceDescription.Alpha`
    - The old `HoloCardCompositeGraph` node remains in `HoloCard-Shader.shadergraph` only as a grouped reference node.
@@ -115,7 +118,17 @@ HoloCardProfile asset
 
 ## Shader Property Contract
 
-This is the target contract for the full holo shader family. The current clean Basic Gloss graph uses only `_CardArt`, `_PointerX`, `_PointerY`, and `_CardOpacity`.
+This is the target contract for the full holo shader family. The current clean Basic Gloss graph uses only `_CardArt`, `_PointerX`, `_PointerY`, `_CardOpacity`, `_GlossInnerRadius`, `_GlossOuterRadius`, and `_GlossIntensity`.
+
+### Current Basic Gloss Controls
+
+These controls are exposed now in `HoloCard-BasicGloss.shadergraph` and stored on `MAT_HoloCard-BasicGloss`.
+
+| Property | Default | Meaning |
+| --- | --- | --- |
+| `_GlossInnerRadius` | `0.1` | Start of the pointer glare falloff. Smaller values make the hot center tighter. |
+| `_GlossOuterRadius` | `0.9` | End of the pointer glare falloff. Larger values make the glare spread farther across the card. |
+| `_GlossIntensity` | `1.0` | Multiplies `_CardOpacity` before the final Overlay blend. Use this as the designer-facing strength control. |
 
 ### Animated Properties
 
@@ -280,6 +293,13 @@ Keep one mode readable before starting the next mode. Visual parity is easier to
 ## How To Modify Existing Modes
 
 Most visual tuning should happen in `HoloCard-BasicGloss.shadergraph`.
+
+For the current Basic Gloss checkpoint, tune in this order:
+
+1. `_GlossInnerRadius` for the bright center size.
+2. `_GlossOuterRadius` for the spread/falloff size.
+3. `_GlossIntensity` for final glare strength.
+4. `_CardOpacity` only when checking hover fade behavior from `CardInteraction`.
 
 Recommended tuning order:
 

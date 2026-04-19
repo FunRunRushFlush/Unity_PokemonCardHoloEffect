@@ -304,6 +304,9 @@
         },
         {
             "m_Id": "d067f81452f24f63954dffa1fda93597"
+        },
+        {
+            "m_Id": "c0761f82b4224c3eaf35f48606386b4a"
         }
     ],
     "m_StickyNoteDatas": [
@@ -735,20 +738,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "830c1f38316047e4905cb5a64d18b9df"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "9ccbf825c1754c6eb0f0a39352a33fe4"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "85d235750ea9410bb86fdf4f73e0ef22"
                 },
                 "m_SlotId": 3
@@ -814,6 +803,20 @@
                     "m_Id": "b4c595691a194b2291d417474516c617"
                 },
                 "m_SlotId": 2
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "9ccbf825c1754c6eb0f0a39352a33fe4"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "2815e445948141f08d880c608f021af9"
+                },
+                "m_SlotId": 0
             }
         },
         {
@@ -1085,6 +1088,34 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "db8eb5a4edaf4d13a656c02bb60a4252"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "9ccbf825c1754c6eb0f0a39352a33fe4"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "db8eb5a4edaf4d13a656c02bb60a4252"
+                },
+                "m_SlotId": 7
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "42d1517c0b7b4a1aa4c4766ff795b91a"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "dbd352a591d64361a961356c56286e55"
                 },
                 "m_SlotId": 2
@@ -1122,34 +1153,6 @@
                     "m_Id": "b5b0f61295884a48b2a9ca88bc0549e0"
                 },
                 "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "e2a61f13f1374aee9280b49d15d847ad"
-                },
-                "m_SlotId": 1
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "2815e445948141f08d880c608f021af9"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "e2a61f13f1374aee9280b49d15d847ad"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "42d1517c0b7b4a1aa4c4766ff795b91a"
-                },
-                "m_SlotId": 0
             }
         },
         {
@@ -2183,8 +2186,8 @@
     "m_ObjectId": "1988422f77cb4f268eecfbb988bb90de",
     "m_Title": "GlareLayer",
     "m_Position": {
-        "x": -1121.001953125,
-        "y": 65.99951171875
+        "x": -1121.000244140625,
+        "y": 66.0
     }
 }
 
@@ -3694,7 +3697,7 @@
     "m_Title": "Scanlines",
     "m_Position": {
         "x": -1040.0,
-        "y": 1645.99951171875
+        "y": 1646.0
     }
 }
 
@@ -4529,8 +4532,8 @@
     "m_ObjectId": "5df2973814d843e981541242d5b30934",
     "m_Title": "Foilmask",
     "m_Position": {
-        "x": -1103.001953125,
-        "y": 567.99951171875
+        "x": -1103.0,
+        "y": 567.9999389648438
     }
 }
 
@@ -6904,8 +6907,8 @@
     "m_ObjectId": "ae1a2dcfaa0e47e6886536c79f471855",
     "m_Title": "Rainbow Gradiant",
     "m_Position": {
-        "x": -1043.001953125,
-        "y": 2140.99951171875
+        "x": -1043.0,
+        "y": 2141.0
     }
 }
 
@@ -7645,6 +7648,17 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "c0761f82b4224c3eaf35f48606386b4a",
+    "m_Title": "REFERENCE - Full HLSL Prototype",
+    "m_Position": {
+        "x": 2544.99951171875,
+        "y": 300.9999694824219
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "c141358bb012429abc29ee7c8ed99a33",
     "m_Id": 2,
@@ -8141,8 +8155,8 @@
     "m_ObjectId": "d067f81452f24f63954dffa1fda93597",
     "m_Title": "shineMask",
     "m_Position": {
-        "x": 1436.998046875,
-        "y": 1155.99951171875
+        "x": 1436.99951171875,
+        "y": 1155.9998779296875
     }
 }
 
@@ -8985,7 +8999,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode",
     "m_ObjectId": "e2a61f13f1374aee9280b49d15d847ad",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "c0761f82b4224c3eaf35f48606386b4a"
     },
     "m_Name": "HoloCardCompositeGraph (Custom Function)",
     "m_DrawState": {
@@ -9249,8 +9263,8 @@
     "m_ObjectId": "eaaeeaa1287a49989a4600edf8a761e6",
     "m_Title": "Spotlight",
     "m_Position": {
-        "x": -1056.001953125,
-        "y": 1142.99951171875
+        "x": -1056.0,
+        "y": 1143.0
     }
 }
 
