@@ -181,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae5487b8a1f3e0f41ae1569028cf3213, type: 2}
+  - {fileID: 2100000, guid: d7ed67c2840d41fca184591b633fd520, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 5925998454608860877}
   - component: {fileID: 4399639940676611351}
   - component: {fileID: 7031466822267683379}
+  - component: {fileID: 8428613289389868451}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -330,6 +331,22 @@ MonoBehaviour:
   cardRotation: {fileID: 5400094665710739366}
   cardFrontRenderer: {fileID: 1308066622064840388}
   mainCamera: {fileID: 0}
+--- !u!114 &8428613289389868451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5229754681949907659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d268e22aee9467bb80c285af6cb1545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardFrontRenderer: {fileID: 1308066622064840388}
+  profile: {fileID: 11400000, guid: cc4c05a7f95c4e899c64c6906a023225, type: 2}
+  randomizeSeed: 1
+  seed: {x: 0.37, y: 0.73}
 --- !u!1 &5390674740878665079
 GameObject:
   m_ObjectHideFlags: 0

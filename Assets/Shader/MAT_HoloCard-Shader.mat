@@ -42,15 +42,35 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FoilTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 04c623808acf00f408c0099563771db9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlitterTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ab751d25fba84824db69fd99c8b2301f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrainTex:
+        m_Texture: {fileID: 2800000, guid: 771bc8137a2ed984ea582e25175250ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
         m_Texture: {fileID: 2800000, guid: 3a4ac03b5db638d49bededd0cb82e26e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PatternTex:
+        m_Texture: {fileID: 2800000, guid: af606f87974916e429b61cf3c4de8834, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosBottomTex:
+        m_Texture: {fileID: 2800000, guid: 0f132e287139db040bff67f6cbd2545f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosMiddleTex:
+        m_Texture: {fileID: 2800000, guid: f7af5b30272f71b4c8e052a57b0f9cff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CosmosTopTex:
+        m_Texture: {fileID: 2800000, guid: f8e50116c9fb14e4ba8b525c9ec0f4ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_db8eb5a4edaf4d13a656c02bb60a4252_Texture_1_Texture2D:
@@ -74,6 +94,10 @@ Material:
     - _BackgroundX: 0
     - _BackgroundY: 0
     - _CardOpacity: 1
+    - _EffectStrength: 1
+    - _FoilBrightness: 0.55
+    - _HoloMode: 0
+    - _LayoutMaskMode: 0
     - _PointerFromCenter: 0
     - _PointerFromLeft: 0
     - _PointerFromTop: 0
@@ -81,6 +105,10 @@ Material:
     - _PointerY: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    - _SeedX: 0.37
+    - _SeedY: 0.73
+    - _UseMaskTex: 0
+    m_Colors:
+    - _CardGlowColor: {r: 0.85, g: 0.95, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

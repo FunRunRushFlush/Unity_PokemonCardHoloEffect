@@ -2,6 +2,15 @@ using UnityEngine;
 
 public class CardInteraction : MonoBehaviour
 {
+    private static readonly int PointerXId = Shader.PropertyToID("_PointerX");
+    private static readonly int PointerYId = Shader.PropertyToID("_PointerY");
+    private static readonly int BackgroundXId = Shader.PropertyToID("_BackgroundX");
+    private static readonly int BackgroundYId = Shader.PropertyToID("_BackgroundY");
+    private static readonly int PointerFromCenterId = Shader.PropertyToID("_PointerFromCenter");
+    private static readonly int PointerFromLeftId = Shader.PropertyToID("_PointerFromLeft");
+    private static readonly int PointerFromTopId = Shader.PropertyToID("_PointerFromTop");
+    private static readonly int CardOpacityId = Shader.PropertyToID("_CardOpacity");
+
     [Header("Referenzen")]
     [SerializeField] private Transform cardTranslation;
     [SerializeField] private Transform cardRotation;
@@ -25,9 +34,16 @@ public class CardInteraction : MonoBehaviour
     // Oversized Raycast: größerer unsichtbarer Bereich für sanften Randübergang
     [SerializeField] private float colliderPadding = 0.05f;
 
+    private void Reset()
+    {
+        AutoAssignReferences();
+    }
+
     private void Awake()
     {
         mpb = new MaterialPropertyBlock();
+        AutoAssignReferences();
+
         if (mainCamera == null)
             mainCamera = Camera.main;
     }
@@ -42,6 +58,9 @@ public class CardInteraction : MonoBehaviour
 
     private void HandleInput()
     {
+        if (mainCamera == null || cardRotation == null)
+            return;
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         bool hitCard = false;
 
@@ -117,6 +136,9 @@ public class CardInteraction : MonoBehaviour
 
     private void ApplyTransform()
     {
+        if (cardTranslation == null || cardRotation == null)
+            return;
+
         cardTranslation.localPosition = new Vector3(
             springTranslate.x.current,
             springTranslate.y.current,
@@ -131,24 +153,51 @@ public class CardInteraction : MonoBehaviour
 
     private void ApplyShaderProperties()
     {
+        if (cardFrontRenderer == null)
+            return;
+
         cardFrontRenderer.GetPropertyBlock(mpb);
 
         float px = springGlare.x.current / 100f;
         float py = springGlare.y.current / 100f;
-        mpb.SetFloat("_PointerX", px);
-        mpb.SetFloat("_PointerY", py);
+        mpb.SetFloat(PointerXId, px);
+        mpb.SetFloat(PointerYId, py);
 
-        mpb.SetFloat("_BackgroundX", springBackground.x.current / 100f);
-        mpb.SetFloat("_BackgroundY", springBackground.y.current / 100f);
+        mpb.SetFloat(BackgroundXId, springBackground.x.current / 100f);
+        mpb.SetFloat(BackgroundYId, springBackground.y.current / 100f);
 
         float fromCenter = Mathf.Sqrt(
             Mathf.Pow(px - 0.5f, 2f) + Mathf.Pow(py - 0.5f, 2f)
         ) / 0.5f;
-        mpb.SetFloat("_PointerFromCenter", Mathf.Clamp01(fromCenter));
-        mpb.SetFloat("_PointerFromLeft", px);
-        mpb.SetFloat("_PointerFromTop", py);
-        mpb.SetFloat("_CardOpacity", springGlare.z.current);
+        mpb.SetFloat(PointerFromCenterId, Mathf.Clamp01(fromCenter));
+        mpb.SetFloat(PointerFromLeftId, px);
+        mpb.SetFloat(PointerFromTopId, py);
+        mpb.SetFloat(CardOpacityId, springGlare.z.current);
 
         cardFrontRenderer.SetPropertyBlock(mpb);
+    }
+
+    private void AutoAssignReferences()
+    {
+        if (cardTranslation == null)
+        {
+            Transform found = transform.Find("CardTranslation");
+            cardTranslation = found != null ? found : transform;
+        }
+
+        if (cardRotation == null)
+        {
+            Transform found = cardTranslation != null ? cardTranslation.Find("CardRotation") : transform.Find("CardRotation");
+            cardRotation = found != null ? found : transform;
+        }
+
+        if (cardFrontRenderer == null && cardRotation != null)
+        {
+            Transform front = cardRotation.Find("CardFront");
+            cardFrontRenderer = front != null ? front.GetComponent<Renderer>() : cardRotation.GetComponentInChildren<Renderer>();
+        }
+
+        if (cardFrontRenderer == null)
+            cardFrontRenderer = GetComponentInChildren<Renderer>();
     }
 }

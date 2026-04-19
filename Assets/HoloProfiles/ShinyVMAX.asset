@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c8e43ff4704bd4977b0fbfc8ff7e4b, type: 3}
+  m_Name: ShinyVMAX
+  m_EditorClassIdentifier: 
+  holoMode: 17
+  layoutMaskMode: 0
+  pokemonType: 8
+  cardArt: {fileID: 2800000, guid: 8fe3185e7ed3b4e45abb5b07a2b2c9d4, type: 3}
+  foilTex: {fileID: 2800000, guid: b071e5a4fff38964893d6297b245cf9c, type: 3}
+  maskTex: {fileID: 0}
+  glitterTex: {fileID: 2800000, guid: ab751d25fba84824db69fd99c8b2301f, type: 3}
+  grainTex: {fileID: 2800000, guid: 771bc8137a2ed984ea582e25175250ea, type: 3}
+  patternTex: {fileID: 2800000, guid: b071e5a4fff38964893d6297b245cf9c, type: 3}
+  cosmosBottomTex: {fileID: 2800000, guid: 0f132e287139db040bff67f6cbd2545f, type: 3}
+  cosmosMiddleTex: {fileID: 2800000, guid: f7af5b30272f71b4c8e052a57b0f9cff, type: 3}
+  cosmosTopTex: {fileID: 2800000, guid: f8e50116c9fb14e4ba8b525c9ec0f4ea, type: 3}
+  cardGlowColor: {r: 0.82, g: 0.88, b: 0.95, a: 1}
+  foilBrightness: 0
+  effectStrength: 1.25
+  useMaskTex: 0
