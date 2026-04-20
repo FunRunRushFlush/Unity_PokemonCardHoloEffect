@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HoloCard-BasicGloss_MAT
+  m_Name: HoloCard-BasicHolo_MAT
   m_Shader: {fileID: -6465566751694194690, guid: b7f933b74f144651b86cf9d8a5500ba1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _CardArt:
-        m_Texture: {fileID: 2800000, guid: 4d77df2dd2c488d4c9b4fe16d78b8110, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0201034afb5f66e4a967515f9fab9934, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LayerMaskTex:
-        m_Texture: {fileID: 2800000, guid: 7e0a47941d653a44caf9fc13af85be4a, type: 3}
+        m_Texture: {fileID: 2800000, guid: ebab55f1744944c4f924dcbaeb36db3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -67,31 +67,36 @@ Material:
     - _BackgroundY: 0.5
     - _CardOpacity: 1
     - _GlossInnerRadius: 0.1
-    - _GlossIntensity: 0.566
+    - _GlossIntensity: 0.5
     - _GlossOuterRadius: 0.9
     - _LayerMaskTexInvert: 0
-    - _LayerMaskTexStrength: 1
+    - _LayerMaskTexStrength: 10
     - _LayerMaskTextStrength: 1
     - _PointerX: 0
     - _PointerY: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RegularBeamMotionX: 0.51
-    - _RegularBeamMotionY: 0.1
-    - _RegularBeamScale: 21.5
-    - _RegularBeamSharpness: 0.379
-    - _RegularBeamStrength: 1
+    - _RegularBeam2MotionX: -1.49
+    - _RegularBeam2MotionY: -1
+    - _RegularBeam2Scale: 2.5
+    - _RegularBeam2Sharpness: 0.144
+    - _RegularBeam2Strength: 0.5
+    - _RegularBeamMotionX: 2.5
+    - _RegularBeamMotionY: 1.75
+    - _RegularBeamScale: 1.6
+    - _RegularBeamSharpness: 0.183
+    - _RegularBeamStrength: 0.5
     - _RegularHoloStrength: 1
     - _RegularRainbowHoloAngle: 110
     - _RegularRainbowHoloScale: 4.7
-    - _RegularRainbowHoloStrength: 5
+    - _RegularRainbowHoloStrength: 1.126
     - _RegularScanlineScale: 110
     - _RegularScanlineStrength: 1
-    - _RegularSpotlightContrast: 1.2
-    - _RegularSpotlightDarken: 1
-    - _RegularSpotlightInnerRadius: 0.064
-    - _RegularSpotlightOuterRadius: 0.5
-    - _RegularSpotlightStrength: 0.45
+    - _RegularSpotlightContrast: 1.8
+    - _RegularSpotlightDarken: 0.721
+    - _RegularSpotlightInnerRadius: 0.099
+    - _RegularSpotlightOuterRadius: 0.345
+    - _RegularSpotlightStrength: 0.372
     - _RegularStripeAngle: 110
     - _RegularStripeScale: 4.8
     m_Colors:
